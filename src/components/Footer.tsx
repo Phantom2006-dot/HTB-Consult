@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import AcademyLogo from "@/components/AcademyLogo";
 
 const Footer = () => {
   return (
@@ -8,9 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <span className="text-2xl font-serif font-bold text-gradient-gold">HTB</span>
-              <span className="text-lg font-sans font-light text-foreground tracking-wider">CONSULTS</span>
+            <Link to="/" aria-label="HTB Consult Academy home" className="mb-4 inline-flex items-center rounded-sm">
+              <AcademyLogo className="h-14" />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Empowering professionals with industry-leading training in Project Management, Business Analysis, and career development.
