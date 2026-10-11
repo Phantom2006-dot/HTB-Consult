@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AcademyLogo from "@/components/AcademyLogo";
 import { useAuth } from "@/contexts/AuthContext";
 
 const navLinks = [
@@ -28,9 +29,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-serif font-bold text-gradient-gold">HTB</span>
-            <span className="text-lg font-sans font-light text-foreground tracking-wider">CONSULTS</span>
+          <Link to="/" aria-label="HTB Consult Academy home" className="flex items-center rounded-sm">
+            <AcademyLogo />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
